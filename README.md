@@ -41,7 +41,7 @@ The app will be available at http://localhost:3000.
 
 ## Configuration
 
-Ensure the server-side API (for WebSocket communication and message storage) is running. You may need to adjust the WebSocket URL or other API endpoints in the client configuration, for example in src/api.js.
+Ensure the server-side API (for WebSocket communication and message storage) is running. You may need to adjust the WebSocket URL or other API endpoints in the client configuration, for example in src/api.
 
 In next.config.ts verify that BASE_URL is set correctly
 
