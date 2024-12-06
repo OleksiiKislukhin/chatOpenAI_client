@@ -48,7 +48,7 @@ In next.config.ts verify that BASE_URL is set correctly
 ```bash
 module.exports = {
   env: {
-    BASE_URL: your_url,
+    BASE_URL: your_url, ('http://127.0.0.1:8080' by default)
   },
 }
 ```
