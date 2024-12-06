@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chat Client
 
-## Getting Started
+This is the client-side application for a chat with Open AI, built with modern web technologies. The chat client connects to the server, allowing users to send and receive messages in real-time.
 
-First, run the development server:
+## Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js**: Framework for React, providing server-side rendering and static site generation.
+- **React**: Frontend framework for building the user interface.
+- **TypeScript**: Typed superset of JavaScript, ensuring type safety and reducing runtime errors.
+- **WebSockets**: For real-time messaging.
+- **CSS/SCSS**: Styling of the chat interface.
+- **Redux/Context API**: For managing global state (if used).
+  
+## Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clone the repository:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+  ```bash
+  git clone https://github.com/yourusername/chat-client.git
+  ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Navigate to the project directory:
 
-## Learn More
+  ```bash
+  cd chat-client-next
+  ```
 
-To learn more about Next.js, take a look at the following resources:
+3. Install dependencies:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  ```bash
+  npm install
+  # or 
+  npx install
+  ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Start the development server:
+  ```bash
+  npx next dev
+  ```
+The app will be available at http://localhost:3000.
 
-## Deploy on Vercel
+## Configuration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Ensure the server-side API (for WebSocket communication and message storage) is running. You may need to adjust the WebSocket URL or other API endpoints in the client configuration, for example in src/api.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+In next.config.ts verify that BASE_URL is set correctly
+
+module.exports = {
+  env: {
+    BASE_URL: 'your_url',
+  },
+}
