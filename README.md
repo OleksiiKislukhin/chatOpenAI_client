@@ -7,8 +7,8 @@ This is the client-side application for a chat with Open AI, built with modern w
 - **Next.js**: Framework for React, providing server-side rendering and static site generation.
 - **React**: Frontend framework for building the user interface.
 - **TypeScript**: Typed superset of JavaScript, ensuring type safety and reducing runtime errors.
-- **WebSockets**: For real-time messaging.
-- **CSS/SCSS**: Styling of the chat interface.
+- **SSE**: For real-time, bidirectional communication between the client and server.
+- **Tailwind**: Styling of the chat interface.
 - **Redux/Context API**: For managing global state (if used).
   
 ## Installation
@@ -16,7 +16,7 @@ This is the client-side application for a chat with Open AI, built with modern w
 1. Clone the repository:
 
   ```bash
-  git clone https://github.com/yourusername/chat-client.git
+  git clone https://github.com/OleksiiKislukhin/chatOpenAI_client.git
   ```
 
 2. Navigate to the project directory:
@@ -45,8 +45,10 @@ Ensure the server-side API (for WebSocket communication and message storage) is 
 
 In next.config.ts verify that BASE_URL is set correctly
 
+```bash
 module.exports = {
   env: {
-    BASE_URL: 'your_url',
+    BASE_URL: your_url,
   },
 }
+```
