@@ -25,10 +25,10 @@ export const ChatItem = ({ chat }: Props) => {
       event.preventDefault();
       const deleteResult = await dispatch(ChatsActions.deleteChat(chat.id));
 
-      if (deleteResult.meta.requestStatus === 'fulfilled'
-        && pathname === `/chats/${chat.id}`
-      ) {
-        router.push('/');
+      if (deleteResult.meta.requestStatus === 'fulfilled') {
+        if (pathname === `/chats/${chat.id}`) {
+          router.push('/');
+        }
       } else {
         alert('Failed to delete chat');
       }
